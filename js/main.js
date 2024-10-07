@@ -1,4 +1,5 @@
 let distance = prompt("Quanti km vuoi percorrere?");
+let total
 
 let running = true;
 while (running)
@@ -6,7 +7,7 @@ while (running)
     if (!isNaN(distance)){
         distance = Number(distance)
         if (distance > 0){
-            const total = distance * 0.21;
+            total = distance * 0.21;
             running =  false;
         }else{
             distance = prompt("Il numero di km deve essere maggiore di 0");
@@ -17,7 +18,6 @@ while (running)
 
 };
 
-
 let age = prompt("Quanti anni hai?");
 
 running = true;
@@ -26,7 +26,6 @@ while (running)
     if (!isNaN(age)){
         age = Number(age)
         if (age >= 0 && age <= 150){
-            const total = age * 0.21;
             running =  false;
         }else{
             age = prompt("Il numero di km deve essere compreso tra 0 e 150");
@@ -37,4 +36,17 @@ while (running)
 
 };
 
-console.log(age)
+const discount18 = 0.2;
+const discount65 = 0.4;
+
+if (age < 18){
+    total = (total - (total * discount18)).toFixed(2);
+}else if(age > 65){
+    total = (total - (total * discount65)).toFixed(2);
+};
+
+console.log(
+    `
+    l'importo totale dovuto è: ${total} euro
+    `
+);
