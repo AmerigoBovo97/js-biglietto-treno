@@ -14,3 +14,22 @@ Dopo trasformate il vostro linguaggio formale in js.
 
 
 Passaggi:
+
+1. ripetere finchè l'utente non inserisce dati corretti
+    1a. chiedere all'utente quanti km ha intenzione di fare
+    1b. controllare che il dato si a un numero e sia maggiore di 0
+
+2. ripetere finchè l'utente non inserisce dati corretti
+    2a. chiedere all'utente quanti anni ha
+    2b. controllare che il dato si a un numero e sia compreso tra 0 e 150
+
+3. calcolare l'importo senza sconto
+
+4. se è minorenne
+        moltiplicare l'importo per 0.2
+   altrimenti se è over 65
+        mopltiplicare l'importo per 0.4
+
+5. arrotondare l'importo a 2 decimali
+
+6. restituire l'importo finale all'utente
