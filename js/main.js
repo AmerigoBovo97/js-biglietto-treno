@@ -1,5 +1,8 @@
 let distance = prompt("Quanti km vuoi percorrere?");
 let total
+const price = 0.21
+const discount18 = 0.2;
+const discount65 = 0.4;
 
 let running = true;
 while (running)
@@ -7,7 +10,7 @@ while (running)
     if (!isNaN(distance)){
         distance = Number(distance)
         if (distance > 0){
-            total = distance * 0.21;
+            total = distance * price;
             running =  false;
         }else{
             distance = prompt("Il numero di km deve essere maggiore di 0");
@@ -36,8 +39,6 @@ while (running)
 
 };
 
-const discount18 = 0.2;
-const discount65 = 0.4;
 
 if (age < 18){
     total = (total - (total * discount18)).toFixed(2);
